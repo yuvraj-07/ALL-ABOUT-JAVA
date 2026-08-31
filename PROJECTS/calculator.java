@@ -9,16 +9,22 @@ public class calculator {
         String choice1;
 
         do{
+
+        System.out.println("What you want to perform[+, -, *, /, 1/x]: ");
+        System.out.println("NOTE: if you perform dividing by zero then its actually impossible.. so dont try it!!");
+
+    
+        String choice = sc.next();
+
+
         System.out.println("enter the First operand: ");
         float Input1 = sc.nextInt();
 
         System.out.println("enter the Second operand: ");
         float Input2 = sc.nextInt();
 
-        System.out.println("What you want to perform[+, -, *, /]: ");
-        System.out.println("NOTE: if you perform dividing by zero then its actually impossible.. so dont try it!!");
-
-        String choice = sc.next();
+        
+        
 
 
         if (choice .equals("+") ) {
@@ -46,6 +52,18 @@ public class calculator {
             System.out.println("the value of your result is: " + div);
             }
         }
+        else if(choice.equals("1/x")) {
+            System.out.println("enter the Special operand for this: ");
+            float Input3 = sc.nextInt();
+            if (Input3 == 0) {
+                System.out.println("nearly impossibe to do.. fk Undefined");
+            }
+            else {
+                float fract = 1/Input3;
+                System.out.println("The result is:" + fract);
+            }
+        }
+        
 
         else {
             System.out.println("invalid output..");
